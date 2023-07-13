@@ -1,5 +1,6 @@
 import React from 'react'
 import { Outlet } from 'react-router'
+import { Link } from 'react-router-dom'
 import {MdDarkMode, MdOutlineMessage} from 'react-icons/md'
 import {IoMdNotificationsOutline} from 'react-icons/io'
 import {AiOutlineQuestionCircle} from 'react-icons/ai'
@@ -21,7 +22,9 @@ const Navbar = () => {
         <div className='bg-[#181818] text-white w-full h-24 flex items-center'>
             <div className='flex items-center justify-between w-[1240px] md:mx-auto mx-10'>
                 <div className='flex items-center'>
-                    <h1 className='text-3xl font-bold text-[#46c0dc] mr-5 '>Sociopedia.</h1>
+                    <Link to='/auth/login'>
+                        <h1 className='text-3xl font-bold text-[#46c0dc] mr-5 '>Sociogram.</h1>
+                    </Link>
                     <input className='bg-[#2d2d2d] rounded px-2 text-xs w-44 h-6 md:flex hidden' type='text' placeholder={`🔍︎ Search...`}></input>
                 </div>
                 <div className='flex justify-between md:w-72 items-center'>
